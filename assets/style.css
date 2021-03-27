@@ -45,21 +45,40 @@ header nav ul li a {
     font-size: 1.55vw;
     color: var(--tertiary-color)
 }
+/* Bio Style Start */
+#bio img {
+    object-fit: cover;
+    display: flexbox;
+    justify-content: center;
+    width: 500px;
+}
 /* Portfolio Style Start */
-.portfolio {
-    width: 100%;
-    margin: 0 auto;
+#portfolio {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around; 
+    justify-content: space-evenly;
+    height: 500px;
 }
-.primary-project {
-    width: 100%;
-    overflow: auto;
+#portfolio img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
 }
-.secondary-project {
-width: 80%;
-overflow: auto;
+.primary-project, .secondary-project {
+    position: relative;
+    text-align: center;
+}
+.primary-project h3, .secondary-project h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+article {
+    display: flexbox;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 /*Contact Style Start */
 .contact {
@@ -73,3 +92,8 @@ footer {
     display: flex;
     width: 100%;
 }
+/* flexrow start */
+.flex-row {
+    display: flex;
+}
+
