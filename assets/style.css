@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 :root {
     --primary-color: #5c6376;
@@ -11,32 +10,66 @@
 body {
     color: var(--tertiary-color);
     font-family: 'Courier New', Courier, monospace;
+    background-color: var(--primary-color);
     }
     /* apply styles to <header> */
 header {
-    padding: 20px 35px;
+    background-image: url("../img_0722.jpg");
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    background-image: url ("..assets/photo-1579546929662-711aa81148cf.jpeg") ;
     background-size: cover;
-    background-position: 80%;
+    background-position: 100%;
+    justify-content: center;
+    align-items: flex-start;
     background-attachment: fixed;
-    z-index: 9999;
 }
 Header h1 {
     font-weight: bold;
     margin: 0;
     font-size: large;
 }
-nav {
-    margin-top: auto;
-    font-weight: bold;
-    font-size: medium;
-    color: paleturquoise;
-    outline-color: var(--secondary-color);
-    background-image: url(https://github.com/LindseyKrause/LindseyKrause.github.io/blob/main/assets/photo-1579546929662-711aa81148cf.jpeg) ;
+/* Header Nav Style Start */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: var(--tertiary-color);
+}
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    color: var(--tertiary-color)
+}
+/* Portfolio Style Start */
+.portfolio {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+.primary-project {
+    width: 100%;
+    overflow: auto;
+}
+.secondary-project {
+width: 80%;
+overflow: auto;
+}
+/*Contact Style Start */
+.contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* Footer Style Start */
+footer {
+    display: flex;
+    width: 100%;
 }
