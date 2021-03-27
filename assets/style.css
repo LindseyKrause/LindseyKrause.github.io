@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #5c6376;
+    --secondary-color: #74005;
+    --tertiary-color: #f4ffed;
+}
+body {
+    color: var(--tertiary-color);
+    font-family: 'Courier New', Courier, monospace;
+    }
+    /* apply styles to <header> */
+header {
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: ("https://github.com/LindseyKrause/LindseyKrause.github.io/blob/main/assets/photo-1579546929662-711aa81148cf.jpeg") ;
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    z-index: 9999;
+}
+Header h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: large;
+}
+nav {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: medium;
+    color: paleturquoise;
+    outline-color: var(--secondary-color);
+}
