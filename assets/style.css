@@ -11,19 +11,22 @@ body {
     color: var(--tertiary-color);
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
     }
     /* apply styles to <header> */
 header {
-    background-image: url("../img_0722.jpg");
+    background-image: url("./gradient.jpeg");
     display: flex;
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
+    top: 0;
     background-size: cover;
     background-position: 100%;
     justify-content: center;
     align-items: flex-start;
-    background-attachment: fixed;
+    z-index: 9999;
 }
 Header h1 {
     font-weight: bold;
@@ -46,54 +49,139 @@ header nav ul li a {
     color: var(--tertiary-color)
 }
 /* Bio Style Start */
+#bio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
 #bio img {
-    object-fit: cover;
-    display: flexbox;
-    justify-content: center;
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 100px;
+    border: #f4ffed;
+    border-radius: var(--tertiary-color);
+    border-style: solid;
+    width: 50%;
+    max-width: 500px;
+
+}
+#bio p {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    max-width: 500px;
+    border: var(--tertiary-color);
+    border-radius: var(--tertiary-color);
+    border-style: solid;
+    margin: 100px;
+    text-align: center;
+    padding: 50px;
+}
+.bio-content {
+    display: flex;
 }
 /* Portfolio Style Start */
 #portfolio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: 500px;
+    margin-bottom: 30px;
+    justify-content: space-around;
+    justify-content: center;
 }
 #portfolio img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
+    max-height: 1000px;
 }
-.primary-project, .secondary-project {
+.portfolio-boxes {
+    display: flex;
+    flex-direction: row;
+    max-height: 1000px;
+    max-width: 1000px;
+}
+.secondary-project-flexcontainer {
+    height: 1000px;
+    justify-content: space-evenly;
+}
+.secondary-project-flexcontainer-project-1 img {
+    height: 500px;
+    width: 500px;
+}
+.secondary-project-flexcontainer-project-2 img {
+    height: 500px;
+    width: 500px;
+}
+.primary-project {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: relative;
     text-align: center;
 }
+.primary-project-flexcontainer {
+    max-height: 1000px;
+    height: 100%;
+}
+.secondary-project {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+    max-height: 500px;
+    height: 50%;
+    max-width: 500px;
+    width: 50%;
+}
 .primary-project h3, .secondary-project h4 {
     position: absolute;
+    display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 article {
-    display: flexbox;
-    flex-flow: row wrap;
     justify-content: center;
 }
 /*Contact Style Start */
-.contact {
-    width: 100%;
+#contact {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+.button1 {
+    display: flex;
+    flex-direction: column;
+}
+.button2 {
+    display: flex;
+    flex-direction: column;
 }
 /* Footer Style Start */
 footer {
     display: flex;
-    width: 100%;
+    flex-direction: row;
 }
 /* flexrow start */
 .flex-row {
     display: flex;
 }
-
+.heading-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    font-size: 48px;
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 100%;
+}
