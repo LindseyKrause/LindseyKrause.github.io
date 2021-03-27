@@ -21,7 +21,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-image: ("https://github.com/LindseyKrause/LindseyKrause.github.io/blob/main/assets/photo-1579546929662-711aa81148cf.jpeg") ;
+    background-image: url ("..assets/photo-1579546929662-711aa81148cf.jpeg") ;
     background-size: cover;
     background-position: 80%;
     background-attachment: fixed;
@@ -38,4 +38,5 @@ nav {
     font-size: medium;
     color: paleturquoise;
     outline-color: var(--secondary-color);
+    background-image: url(https://github.com/LindseyKrause/LindseyKrause.github.io/blob/main/assets/photo-1579546929662-711aa81148cf.jpeg) ;
 }
