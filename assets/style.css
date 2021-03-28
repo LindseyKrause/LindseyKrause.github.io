@@ -11,8 +11,6 @@ body {
     color: var(--tertiary-color);
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
     }
     /* apply styles to <header> */
 header {
@@ -22,10 +20,15 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-size: cover;
+    background-size: 100%;
     background-position: 100%;
     justify-content: center;
     align-items: flex-start;
+    z-index: 9999;
+}
+header img {
+    display: flex;
+    width: 100%;
     z-index: 9999;
 }
 Header h1 {
@@ -52,7 +55,7 @@ header nav ul li a {
 #bio {
     display: flex;
     flex-flow: row wrap;
-    justify-content: left;
+    justify-content: space-around;
 }
 #bio img {
     display: flex;
@@ -93,6 +96,10 @@ header nav ul li a {
 }
 #portfolio img {
     max-height: 1000px;
+    opacity: 50%;
+    border-style: inset;
+    border-color: inherit;
+    margin: 10px;
 }
 .portfolio-boxes {
     display: flex;
@@ -184,4 +191,74 @@ footer {
     text-align: center;
     margin: 0 auto 35px auto;
     width: 100%;
+}
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        display: flex;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-size: cover;
+    background-position: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999
+}
+    header h1 {
+        width: 100%;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+    
+header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+}
+    
+header nav ul li a {
+        font-size: 20px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#portfolio {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    margin: 50px;
+}    
+.portfolio-boxes {
+    display: flex;
+    flex-direction: column;
+}
+.primary-project-flexcontainer {
+    display: flex;
+    flex-direction: row;
+    width: 980px;
+    justify-content: space-around;
+}
+.primary-project img {
+    display: flex;
+    max-width: 980px;
+    width: 100%;
+}
+.secondary-project-flexcontainer{
+    display: flex;
+    flex-direction: row;
+    width: 980px;
+}
+.secondary-project-flexcontainer-project-1{
+    display: flex;
+    flex-direction: column;
+}
+.secondary-project-flexcontainer-project-2 {
+    display: flex;
+    flex-direction: column;
+}
+footer h2, footer div {
+        text-align: center;
+        width: 100%;
+}
 }
