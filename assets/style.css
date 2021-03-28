@@ -4,7 +4,7 @@
 }
 :root {
     --primary-color: #5c6376;
-    --secondary-color: #74005;
+    --secondary-color: rgba(194, 21, 139, 0.543);
     --tertiary-color: #f4ffed;
 }
 body {
@@ -94,6 +94,9 @@ header nav ul li a {
     justify-content: space-around;
     justify-content: center;
 }
+#portfolio h3, #portfolio h4 {
+color: #f4ffed;
+}
 #portfolio img {
     max-height: 1000px;
     opacity: 50%;
@@ -155,25 +158,48 @@ article {
 #contact {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+
 }
 .buttons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .button1 {
     display: flex;
-    flex-direction: column;
+    margin: 35px;
 }
 .button2 {
     display: flex;
-    flex-direction: column;
+    margin: 35px;
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 25px;
+    width: 250px;
+    justify-content: center;
+    height: 175px;
+}
+.button2 a {
+    padding: 50px;
 }
 /* Footer Style Start */
 footer {
     display: flex;
     flex-direction: row;
+}
+footer h4{
+    font-size: 16px;
+    font-weight: lighter;
+    border-bottom: var(--tertiary-color);
+    justify-content: left;
+    padding-left: 30px;
+    padding-bottom: 30px;
 }
 /* flexrow start */
 .flex-row {
@@ -191,6 +217,10 @@ footer {
     text-align: center;
     margin: 0 auto 35px auto;
     width: 100%;
+}
+/* Link Styling */
+a:link {
+    color:#f4ffed
 }
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
