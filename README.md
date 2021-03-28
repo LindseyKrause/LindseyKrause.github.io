@@ -1,5 +1,5 @@
 # Lindsey Krause Portfolio
-## Website: LindseyKrause.github.io
+## Website: https://lindseykrause.github.io/
 
 -----Insert Screenshot-----
 ### Descripton: This is a portfolio website for Lindsey Krause that includes bio, contact info, & projects. 
