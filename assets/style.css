@@ -11,6 +11,7 @@ body {
     color: var(--tertiary-color);
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--primary-color);
+    border-radius: 25px;
     }
     /* apply styles to <header> */
 header {
@@ -25,6 +26,9 @@ header {
     justify-content: center;
     align-items: flex-start;
     z-index: 9999;
+    border-radius: 0 0 23px 23px;
+    border-bottom-style: groove;
+    width: 100%;
 }
 header img {
     display: flex;
@@ -32,117 +36,88 @@ header img {
     z-index: 9999;
 }
 Header h1 {
-    font-weight: bold;
+    font-weight: normal;
     margin: 0;
-    font-size: large;
+    font-size: x-large;
+    padding-right: 200px;
+    padding-right: 50px;
 }
 /* Header Nav Style Start */
 header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     list-style: none;
     color: var(--tertiary-color);
+    padding-left: 50px;
+    padding-right: 50px;
 }
 header nav ul li a {
-    padding: 10px 15px;
+    padding: 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     color: var(--tertiary-color)
 }
-/* Bio Style Start */
-#bio {
+.nav-name {
+    display:flex;
+    text-justify: left;
+}
+.navbox {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+}
+.indnavbuttons li {
+    justify-content: space-evenly;
+    text: 100px;
+}
+/* Bio Style Start */
+.bio-content {
+    display: flex;
     justify-content: space-around;
 }
 #bio img {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 100px;
     border: #f4ffed;
-    border-radius: var(--tertiary-color);
-    border-style: solid;
-    width: 50%;
-    max-width: 500px;
-
+    border-radius: 23px;
+    border-style: solid
 }
 #bio p {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%;
-    max-width: 500px;
     border: var(--tertiary-color);
-    border-radius: var(--tertiary-color);
+    border-radius: 23px;
     border-style: solid;
-    margin: 100px;
     text-align: center;
     padding: 50px;
 }
 .bio-content {
     display: flex;
 }
-/* Portfolio Style Start */
-#portfolio {
+.bioimage {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    justify-content: space-around;
+    flex-direction: column;
+    max-width: 750px;
+    width: 50%;
+    max-height: 750px;
+    height: 50%;
+    padding 50px;
     justify-content: center;
 }
-#portfolio h3, #portfolio h4 {
-color: #f4ffed;
-}
-#portfolio img {
-    max-height: 1000px;
-    opacity: 50%;
-    border-style: inset;
-    border-color: inherit;
-    margin: 10px;
-}
-.portfolio-boxes {
-    display: flex;
-    flex-direction: row;
-    max-height: 1000px;
-    max-width: 1000px;
-}
-.secondary-project-flexcontainer {
-    height: 1000px;
-    justify-content: space-evenly;
-}
-.secondary-project-flexcontainer-project-1 img {
-    height: 500px;
-    width: 500px;
-}
-.secondary-project-flexcontainer-project-2 img {
-    height: 500px;
-    width: 500px;
-}
-.primary-project {
+.biotext {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    position: relative;
-    text-align: center;
-}
-.primary-project-flexcontainer {
-    max-height: 1000px;
-    height: 100%;
-}
-.secondary-project {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    text-align: center;
-    flex-wrap: wrap;
-    max-height: 500px;
-    height: 50%;
-    max-width: 500px;
+    max-width: 750px;
     width: 50%;
+    max-height: 750px;
+    height: 50%;
+    padding:50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* Portfolio Style Start */
+.portfolio-section {
+    display: flex;
+}
+.portfolio-header {
+    display: flex;
+
 }
 .primary-project h3, .secondary-project h4 {
     position: absolute;
@@ -151,8 +126,74 @@ color: #f4ffed;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-article {
+#portfolio {
+    margin-bottom: 30px;
     justify-content: center;
+}
+#portfolio h3, #portfolio h4 {
+color: #f4ffed;
+}
+#portfolio img {
+    opacity: 50%;
+    border-style: inset;
+    border-color: inherit;
+    margin: 10px;
+    height: 1000px;
+    width: 500px;
+}
+.portfolio-boxes {
+    display: flex;
+    flex-direction: row;
+    max-height: 1000px;
+    max-width: 1000px;
+    justify-content: space-evenly;
+}
+.primary-project-flexcontainer {
+    height: 100%;
+    max-height: 1000px;
+    max-width: 500px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+}
+.secondary-project-flexcontainer {
+    height: 100%;
+    max-height: 1000px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 50px;
+}
+.secondary-project-flexcontainer-project-1 {
+    display: flex;
+    flex-grow: 2;
+    height: 50%;
+    max-height: 500px;
+    padding: 25px
+}
+.secondary-project-flexcontainer-project-2 {
+    display: flex;
+    flex-grow: 2;
+    height: 50%;
+    max-height: 500px;
+    padding: 25px;
+}
+.secondary-project-flexcontainer-project-1 img {
+    display: flex;
+    max-height: 500px;
+    max-width: 500px;
+}
+.secondary-project-flexcontainer-project-2 img {
+    display: flex;
+    max-height: 500px;
+    max-width: 500px;
 }
 /*Contact Style Start */
 #contact {
@@ -160,6 +201,7 @@ article {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 100px;
 
 }
 .buttons {
@@ -193,6 +235,10 @@ footer {
     display: flex;
     flex-direction: row;
 }
+footer h2, footer div {
+    text-align: center;
+    width: 100%;
+}
 footer h4{
     font-size: 16px;
     font-weight: lighter;
@@ -223,6 +269,18 @@ a:link {
     color:#f4ffed
 }
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 980px) {
     header {
         display: flex;
@@ -286,9 +344,5 @@ header nav ul li a {
 .secondary-project-flexcontainer-project-2 {
     display: flex;
     flex-direction: column;
-}
-footer h2, footer div {
-        text-align: center;
-        width: 100%;
 }
 }
